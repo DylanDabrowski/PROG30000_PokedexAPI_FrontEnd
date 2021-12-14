@@ -1,17 +1,30 @@
 import React from "react";
+import "./style.css";
 
 function populateList(items) {
   items.forEach((item) => addItem(item));
 }
 
 function addItem(item) {
-  const span = document.createElement("span");
-  span.setAttribute("data-id", item.id);
   const li = document.createElement("li");
-  li.innerHTML = item.name;
+  li.className = "pokemonCard";
 
-  li.setAttribute("data-id", item.id);
-  li.appendChild(span);
+  const name = document.createElement("h1");
+  name.className = "pokemonName";
+  name.innerHTML = item.name;
+
+  const type = document.createElement("h3");
+  type.className = "pokemonType";
+  type.innerHTML = item.type;
+
+  const desc = document.createElement("p");
+  desc.className = "pokemonDesc";
+  desc.innerHTML = item.description;
+
+  li.appendChild(name);
+  li.appendChild(type);
+  li.appendChild(desc);
+
   document.getElementById("pokemonCards").appendChild(li);
 }
 
