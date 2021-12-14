@@ -23,7 +23,7 @@ const Navbar = ({ toggle }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to="about">See Pokemon</NavLinks>
+              <NavLinks to="/pokemonpage">See Pokemon</NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks to="discover">Add / Remove</NavLinks>

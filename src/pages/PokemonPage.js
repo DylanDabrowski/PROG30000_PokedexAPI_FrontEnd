@@ -1,9 +1,9 @@
 import React, { useState } from "react";
+import FetchPokemon from "../api/FetchPokemon/FetchPokemon";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
-import WelcomePage from "../components/WelcomePage";
 
-const Home = () => {
+const PokemonPage = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -14,9 +14,10 @@ const Home = () => {
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <WelcomePage />
+      <h1>Pokemon Page</h1>
+      <FetchPokemon />
     </>
   );
 };
 
-export default Home;
+export default PokemonPage;
