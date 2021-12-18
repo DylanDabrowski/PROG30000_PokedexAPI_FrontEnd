@@ -4,11 +4,11 @@ import "./addpokemon.css";
 const AddPokemon = () => {
   const [name, setName] = useState("");
   const [type, setType] = useState("");
-  const [desc, setDesc] = useState("");
+  const [description, setDesc] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const pokemon = { name, type, desc };
+    const pokemon = { name, type, description };
 
     fetch("http://localhost:5000/api/pokemon", {
       method: "POST",
@@ -46,7 +46,7 @@ const AddPokemon = () => {
             className="addPokeField"
             type="text"
             required
-            value={desc}
+            value={description}
             onChange={(e) => setDesc(e.target.value)}
             placeholder="enter a description..."
           />

@@ -1,5 +1,5 @@
-import react from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+// import react from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PokemonPage from "./pages/PokemonPage";
 import AddPage from "./pages/AddPage";
 import DeletePage from "./pages/DeletePage";

@@ -28,14 +28,18 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
+  padding: 10px;
+  justify-items: center;
 }
 
 .card {
+  border: 1px solid #ccc;
   color: var(--clr-neutral-900);
   background-size: cover;
   box-shadow: 5px 5px 4px 2px #888888;
-  padding: 10rem 0 0;
-  max-width: 35ch;
+  padding: 2rem 0 0;
+  margin: 20px;
+  width: 35ch;
   border-radius: 0.5rem;
   overflow: hidden;
 
@@ -48,8 +52,29 @@
 }
 
 .card-content {
-  /* border: 1px solid black; */
-  padding: 10px 0;
+  /* border: 1px solid blue; */
+  margin: 10px;
+  padding: 10px;
+}
+
+.card-image {
+  width: 150px;
+}
+
+.card-title::first-letter {
+  text-transform: capitalize;
+}
+
+.card-tag {
+  width: max-content;
+  background-color: red;
+  color: white;
+  padding: 5px 10px 7px;
+  align-items: center;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 2px 2px 1px 1px #ccc;
 }
 
 .searchTextField {
