@@ -21,33 +21,40 @@ const AddPokemon = () => {
 
   return (
     <div className="addPokemonWrapper">
-      <form className="addForm" onSubmit={handleSubmit}>
-        <input
-          className="pokemonsName"
-          type="text"
-          required
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Name"
-        />
-        <input
-          className="pokemonsType"
-          type="text"
-          required
-          value={type}
-          onChange={(e) => setType(e.target.value)}
-          placeholder="Type"
-        />
-        <input
-          className="pokemonsDesc"
-          type="text"
-          required
-          value={desc}
-          onChange={(e) => setDesc(e.target.value)}
-          placeholder="Description"
-        />
-        <input type="submit" className="searchSubmitButton" />
-      </form>
+      <div className="formWrapper">
+        <form className="addForm" onSubmit={handleSubmit}>
+          <h1 className="addPokeHeader">Name:</h1>
+          <input
+            className="addPokeField"
+            type="text"
+            required
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="enter a name..."
+          />
+          <h1 className="addPokeHeader">Type:</h1>
+          <input
+            className="addPokeField"
+            type="text"
+            required
+            value={type}
+            onChange={(e) => setType(e.target.value)}
+            placeholder="enter a pokemon type..."
+          />
+          <h1 className="addPokeHeader">Description:</h1>
+          <input
+            className="addPokeField"
+            type="text"
+            required
+            value={desc}
+            onChange={(e) => setDesc(e.target.value)}
+            placeholder="enter a description..."
+          />
+          <div className="submitWrapper">
+            <input type="submit" className="addPokeSubmit" value="Add" />
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

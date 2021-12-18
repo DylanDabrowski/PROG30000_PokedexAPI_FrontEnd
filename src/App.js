@@ -4,6 +4,7 @@ import PokemonPage from "./pages/PokemonPage";
 import AddPage from "./pages/AddPage";
 import DeletePage from "./pages/DeletePage";
 import Home from "./pages";
+import SearchPage from "./pages/SearchPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/pokemonpage" element={<PokemonPage />} />
         <Route path="/addpage" element={<AddPage />} />
         <Route path="/deletepage" element={<DeletePage />} />
+        <Route path="/searchpage" element={<SearchPage />} />
       </Routes>
     </BrowserRouter>
   );

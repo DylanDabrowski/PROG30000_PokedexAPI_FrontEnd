@@ -1,5 +1,5 @@
-import React from "react";
-import "./fetchpokemon.css";
+import { useState } from "react";
+import "./searchpokemon.css";
 
 function populateList(items) {
   items.forEach((item) => addItem(item));
@@ -34,14 +34,13 @@ function addItem(item) {
   document.getElementById("pokemonCards").appendChild(card);
 }
 
-export default class FetchPokemon extends React.Component {
-  state = {
-    loading: true,
-    pokemons: null,
-  };
+const SearchPokemon = () => {
+  const [type, setType] = useState("");
 
-  async componentDidMount() {
-    fetch("http://localhost:5000/api/pokemon", {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    fetch("http://localhost:5000/api/pokemon/bytype/" + type, {
       method: "GET",
       headers: {
         "content-type": "application/json",
@@ -49,16 +48,23 @@ export default class FetchPokemon extends React.Component {
     })
       .then((response) => response.json())
       .then((data) => populateList(data));
-  }
+  };
 
-  render() {
-    return (
-      <div className="poke">
-        <div className="pokeWrapper">
-          <h2 className="title">Pokemon</h2>
-          <div id="pokemonCards" className="pokemonCards"></div>
-        </div>
-      </div>
-    );
-  }
-}
+  return (
+    <div className="searchPokemonWrapper">
+      <form className="search" onSubmit={handleSubmit}>
+        <input
+          className="searchTextField"
+          type="text"
+          value={type}
+          onChange={(e) => setType(e.target.value)}
+          placeholder="Search by Type..."
+        />
+        <input type="submit" className="searchSubmitButton" value="Search" />
+      </form>
+      <div id="pokemonCards" className="pokemonCards"></div>
+    </div>
+  );
+};
+
+export default SearchPokemon;

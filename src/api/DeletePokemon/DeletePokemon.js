@@ -17,16 +17,20 @@ const DeletePokemon = () => {
 
   return (
     <div className="deletePokemonWrapper">
-      <form className="pokeSearch" onSubmit={handleSubmit}>
+      <form className="deleteSearch" onSubmit={handleSubmit}>
         <input
-          className="searchTextField"
+          className="deleteSearchTextField"
           type="text"
           required
           value={id}
           onChange={(e) => setId(e.target.value)}
-          placeholder="Search Pokemon Id..."
+          placeholder="Enter Pokemon Id..."
         />
-        <input type="submit" className="searchSubmitButton" />
+        <input
+          type="submit"
+          className="deleteSearchSubmitButton"
+          value="Delete"
+        />
       </form>
     </div>
   );
