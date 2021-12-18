@@ -8,6 +8,7 @@ const AddPokemon = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const pokemon = { name, type, description };
 
     fetch("http://localhost:5000/api/pokemon", {
@@ -29,7 +30,7 @@ const AddPokemon = () => {
             type="text"
             required
             value={name}
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => setName(e.target.value.toLowerCase())}
             placeholder="enter a name..."
           />
           <h1 className="addPokeHeader">Type:</h1>
@@ -38,7 +39,7 @@ const AddPokemon = () => {
             type="text"
             required
             value={type}
-            onChange={(e) => setType(e.target.value)}
+            onChange={(e) => setType(e.target.value.toLowerCase())}
             placeholder="enter a pokemon type..."
           />
           <h1 className="addPokeHeader">Description:</h1>

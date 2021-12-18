@@ -1,7 +1,12 @@
 .deletePokemonWrapper {
+  /* border: 1px solid black; */
   width: 100%;
-  margin: 40px;
   text-align: center;
+}
+
+.deleteSearch {
+  /* border: 1px solid black; */
+  margin: 40px;
 }
 
 .deleteSearchTextField {
