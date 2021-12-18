@@ -26,17 +26,14 @@ const Navbar = ({ toggle }) => {
               <NavLinks to="/pokemonpage">See Pokemon</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="discover">Add / Remove</NavLinks>
+              <NavLinks to="/addpage">Add</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="services">Services</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to="signup">Sign Up</NavLinks>
+              <NavLinks to="/deletepage">Delete</NavLinks>
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to="/signin">Sign In</NavBtnLink>
+            <NavBtnLink to="/">Home</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>

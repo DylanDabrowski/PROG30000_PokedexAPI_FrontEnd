@@ -1,31 +1,37 @@
 import React from "react";
-import "./style.css";
+import "./fetchpokemon.css";
 
 function populateList(items) {
   items.forEach((item) => addItem(item));
 }
 
 function addItem(item) {
-  const li = document.createElement("li");
-  li.className = "pokemonCard";
+  const card = document.createElement("a");
+  card.className = "card";
+  card.onclick = console.log("hello");
 
-  const name = document.createElement("h1");
-  name.className = "pokemonName";
+  const cardContent = document.createElement("div");
+  cardContent.className = "card-content";
+
+  const name = document.createElement("h2");
+  name.className = "card-title";
   name.innerHTML = item.name;
 
   const type = document.createElement("h3");
-  type.className = "pokemonType";
+  type.className = "card-tag";
   type.innerHTML = item.type;
 
   const desc = document.createElement("p");
-  desc.className = "pokemonDesc";
+  desc.className = "card-body";
   desc.innerHTML = item.description;
 
-  li.appendChild(name);
-  li.appendChild(type);
-  li.appendChild(desc);
+  cardContent.appendChild(name);
+  cardContent.appendChild(type);
+  cardContent.appendChild(desc);
 
-  document.getElementById("pokemonCards").appendChild(li);
+  card.appendChild(cardContent);
+
+  document.getElementById("pokemonCards").appendChild(card);
 }
 
 export default class FetchPokemon extends React.Component {
@@ -47,8 +53,20 @@ export default class FetchPokemon extends React.Component {
 
   render() {
     return (
-      <div>
-        <ul id="pokemonCards"></ul>
+      <div className="poke">
+        <div className="pokeWrapper">
+          <form className="pokeSearch">
+            <input
+              className="searchTextField"
+              type="text"
+              id="psearch"
+              name="psearch"
+              placeholder="Search..."
+            />
+            <input type="submit" className="searchSubmitButton" />
+          </form>
+          <div id="pokemonCards" className="pokemonCards"></div>
+        </div>
       </div>
     );
   }

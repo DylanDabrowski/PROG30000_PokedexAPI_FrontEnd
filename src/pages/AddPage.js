@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import FetchPokemon from "../api/FetchPokemon/FetchPokemon";
+import AddPokemon from "../api/AddPokemon/AddPokemon";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 
-const PokemonPage = () => {
+const AddPage = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -14,9 +14,9 @@ const PokemonPage = () => {
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <FetchPokemon />
+      <AddPokemon />
     </>
   );
 };
 
-export default PokemonPage;
+export default AddPage;

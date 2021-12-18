@@ -1,0 +1,73 @@
+:root {
+  --clr-neutral-900: hsl(207, 19%, 9%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-accent-400: #ed1614;
+}
+
+.poke {
+  /* border: 1px solid black; */
+  width: 100%;
+  height: max-content;
+}
+
+.pokeWrapper {
+  /* border: 1px solid black; */
+  padding: 40px;
+}
+
+.pokeSearch {
+  /* border: 1px solid black; */
+  text-align: center;
+  padding: 20px 0;
+  margin: 20px 0;
+}
+
+.pokemonCards {
+  /* border: 1px solid red; */
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.card {
+  color: var(--clr-neutral-900);
+  background-size: cover;
+  box-shadow: 5px 5px 4px 2px #888888;
+  padding: 10rem 0 0;
+  max-width: 35ch;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  transition: transform 500ms ease;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: scale(1.05);
+}
+
+.card-content {
+  /* border: 1px solid black; */
+  padding: 10px 0;
+}
+
+.searchTextField {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+.searchSubmitButton {
+  background-color: var(--clr-accent-400);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
