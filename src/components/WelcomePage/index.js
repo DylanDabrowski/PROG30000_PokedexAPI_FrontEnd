@@ -6,7 +6,7 @@ const WelcomePage = () => {
     <>
       <Wrapper>
         <h1>Welcome</h1>
-        <StartButton to={"/"}>Pokemon</StartButton>
+        <StartButton to={"/pokemonpage"}>Pokemon</StartButton>
       </Wrapper>
     </>
   );

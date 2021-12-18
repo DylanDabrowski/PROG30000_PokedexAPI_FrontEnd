@@ -95,7 +95,6 @@ export default class FetchPokemon extends React.Component {
     return (
       <div className="poke">
         <div className="pokeWrapper">
-          <h2 className="title">Pokedex</h2>
           <div id="pokemonCards" className="pokemonCards"></div>
         </div>
 

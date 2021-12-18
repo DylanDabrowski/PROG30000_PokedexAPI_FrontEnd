@@ -1,7 +1,73 @@
-.searchPokemonWrapper {
+:root {
+  --clr-neutral-900: hsl(207, 19%, 9%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-accent-400: #ed1614;
+}
+
+.searchPokemon {
+  /* border: 1px solid black; */
   width: 100%;
-  margin: 40px;
-  text-align: center;
+  height: max-content;
+}
+
+.searchPokemonWrapper {
+  /* border: 1px solid black; */
+  padding: 40px;
+}
+
+.pokemonCards {
+  /* border: 1px solid red; */
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  padding: 10px;
+  justify-items: center;
+}
+
+.card {
+  border: 1px solid #ccc;
+  color: var(--clr-neutral-900);
+  background-size: cover;
+  box-shadow: 5px 5px 4px 2px #888888;
+  padding: 2rem 0 0;
+  margin: 20px;
+  width: 35ch;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  transition: transform 500ms ease;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: scale(1.05);
+}
+
+.card-content {
+  /* border: 1px solid blue; */
+  margin: 10px;
+  padding: 10px;
+}
+
+.card-image {
+  width: 150px;
+}
+
+.card-title::first-letter {
+  text-transform: capitalize;
+}
+
+.card-tag {
+  width: max-content;
+  background-color: red;
+  color: white;
+  padding: 5px 10px 7px;
+  align-items: center;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 2px 2px 1px 1px #ccc;
 }
 
 .searchTextField {
@@ -15,6 +81,10 @@
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
+.submitBtnWrapper {
+  text-align: center;
+}
+
 .searchSubmitButton {
   background-color: var(--clr-accent-400);
   color: white;
@@ -23,3 +93,5 @@
   border-radius: 4px;
   cursor: pointer;
 }
+
+/* ==================== POPUP ==================== */
